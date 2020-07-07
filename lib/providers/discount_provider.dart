@@ -11,6 +11,9 @@ class DiscountProvider extends ChangeNotifier {
       notifyListeners();
     }
     if (selectedVariable == DiscountSelectedVariable.discount) {
+      if(double.parse(value)>100){
+        return;
+      }
       this.discount = value;
       notifyListeners();
     }
@@ -27,9 +30,12 @@ class DiscountProvider extends ChangeNotifier {
   }
 
   String calculateFinalPrice() {
-    var finalPrice = double.parse(price) - double.parse(price) * (double.parse(discount)/100);
+    var finalPrice = double.parse(price) -
+        double.parse(price) * (double.parse(discount) / 100);
+    if (finalPrice < 0) return '0';
     return finalPrice.toStringAsFixed(2);
   }
+
   clearData() {
     discount = '0';
     price = '0';

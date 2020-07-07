@@ -49,7 +49,7 @@ class _PercentageScreenState extends State<PercentageScreen> {
               Container(
                 padding: EdgeInsets.all(8.0),
                 alignment: Alignment.centerRight,
-                width: 140,
+                width: 130,
                 child: FittedBox(
                   fit: BoxFit.fitWidth,
                   child: InkWell(
@@ -90,7 +90,7 @@ class _PercentageScreenState extends State<PercentageScreen> {
               Container(
                 padding: EdgeInsets.all(8.0),
                 alignment: Alignment.centerRight,
-                width: 140,
+                width: 130,
                 child: FittedBox(
                   fit: BoxFit.fitWidth,
                   child: InkWell(
